@@ -92,7 +92,7 @@
         text-align: center;
         font-size:60px;
         color: #fff;
-        border-bottom: 1px solid #ddd;
+        /* border-bottom: 1px solid #ddd; */
     }
     .ms-login{
         position: absolute;
