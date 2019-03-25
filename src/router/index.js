@@ -4,11 +4,9 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 export const constantRouterMap=[
-
-    
     {
         path: '/',
-        redirect: '/markdown'
+        redirect: '/dashboard'
     },
     {
         path: '/login',
@@ -22,25 +20,28 @@ export const constantRouterMap=[
                     {
                         path: '/dashboard',
                         component: resolve => require(['../components/page/Dashboard.vue'], resolve),
-                        meta: { title: '系统首页' }
+                        meta: { 
+                            title: '系统首页' ,
+                            roles: ['stu']
+                            }
                     },
-    {
-               // markdown组件
-                path: '/markdown',
-                component: resolve => require(['../components/page/Markdown.vue'], resolve),
-                meta: { 
-                    title: '实验报告',
-                    roles: ['stu'] 
-                      }    
-            },
-            {
-                path: '/form',
-                component: resolve => require(['../components/page/BaseForm.vue'], resolve),
-                meta: { 
-                    title: '个人信息',
-                    roles: ['stu']
-                      }
-            },
+                    {
+                    // markdown组件
+                        path: '/markdown',
+                        component: resolve => require(['../components/page/Markdown.vue'], resolve),
+                        meta: { 
+                            title: '实验报告',
+                            roles: ['stu'] 
+                            }    
+                    },
+                    {
+                        path: '/form',
+                        component: resolve => require(['../components/page/BaseForm.vue'], resolve),
+                        meta: { 
+                            title: '个人信息',
+                            roles: ['stu']
+                            }
+                    },
                 ]
         
         }

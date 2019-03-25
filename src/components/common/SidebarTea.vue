@@ -41,7 +41,7 @@
                       {
                          icon: 'el-icon-lx-cascades',
                          index: 'markdown',
-                         title: '实验报告'
+                         title: '实验报告1'
                      },
                      {
                          icon: 'el-icon-lx-copy',
